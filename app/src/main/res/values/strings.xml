@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ImpostoRenda</string>
+    <string name="placeHolderInpSalario">Salário (R$)</string>
+    <string name="textoHintInpSalario">Salário mensal</string>
+    <string name="placeHolderInpGastos">Gastos (R$)</string>
+    <string name="textoHintInpGastos">Gastos com saúde e educação</string>
+    <string name="placeHolderInpDepend">Dependentes</string>
+    <string name="textoHintInpDepend">N° de dependentes</string>
+    <string name="textoResultadoImp">SEU IMPOSTO DE RENDA MENSAL:</string>
+    <string name="botaoCalcularTexto">CALCULAR</string>
+    <string name="msgToastCalculo">Calculando Imposto...</string>
+</resources>

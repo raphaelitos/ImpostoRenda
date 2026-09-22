@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="24dp">
+
+    <EditText
+        android:id="@+id/salario_text_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/placeHolderInpSalario"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/salario_texto_hint"
+
+        />
+
+    <TextView
+        android:id="@+id/salario_texto_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoHintInpSalario"
+        app:layout_constraintTop_toBottomOf="@id/salario_text_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/gastos_text_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/placeHolderInpGastos"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintTop_toBottomOf="@id/salario_texto_hint"
+        app:layout_constraintBottom_toTopOf="@id/gastos_texto_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/gastos_texto_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoHintInpGastos"
+        app:layout_constraintTop_toBottomOf="@id/gastos_text_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <EditText
+        android:id="@+id/depend_text_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/placeHolderInpDepend"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gastos_texto_hint"
+        app:layout_constraintBottom_toTopOf="@id/depend_texto_hint"
+
+
+        />
+
+    <TextView
+        android:id="@+id/depend_texto_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoHintInpDepend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/depend_text_input"
+
+        />
+
+    <TextView
+        android:id="@+id/resultado_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoResultadoImp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/depend_texto_hint"
+        />
+
+    <TextView
+        android:id="@+id/cifrao_valor_imposto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$"
+        app:layout_constraintTop_toBottomOf="@id/resultado_texto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/valor_calculado_imposto"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/valor_calculado_imposto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/resultado_texto"
+        app:layout_constraintStart_toEndOf="@id/cifrao_valor_imposto"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <Button
+
+        android:id="@+id/btn_calculo_imp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/botaoCalcularTexto"
+        android:backgroundTint="@color/green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cifrao_valor_imposto"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
