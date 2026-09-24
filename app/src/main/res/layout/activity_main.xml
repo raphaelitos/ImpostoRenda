@@ -7,20 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:paddingHorizontal="12dp"
-    android:paddingVertical="24dp">
+    android:paddingVertical="120dp">
 
     <EditText
         android:id="@+id/salario_text_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/placeHolderInpSalario"
+        android:hint="@string/placeHolderInpSalario"
         app:layout_constraintWidth_percent="0.8"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/salario_texto_hint"
-
+        app:layout_constraintVertical_chainStyle="spread_inside"
         />
 
     <TextView
@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="@string/textoHintInpSalario"
         app:layout_constraintTop_toBottomOf="@id/salario_text_input"
+        app:layout_constraintBottom_toTopOf="@id/gastos_text_input"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
@@ -37,7 +38,7 @@
         android:id="@+id/gastos_text_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/placeHolderInpGastos"
+        android:hint="@string/placeHolderInpGastos"
         app:layout_constraintWidth_percent="0.8"
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/salario_texto_hint"
@@ -53,6 +54,7 @@
         android:layout_height="wrap_content"
         android:text="@string/textoHintInpGastos"
         app:layout_constraintTop_toBottomOf="@id/gastos_text_input"
+        app:layout_constraintBottom_toTopOf="@id/depend_text_input"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -62,7 +64,7 @@
         android:id="@+id/depend_text_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/placeHolderInpDepend"
+        android:hint="@string/placeHolderInpDepend"
         app:layout_constraintWidth_percent="0.8"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"

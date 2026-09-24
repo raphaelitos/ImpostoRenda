@@ -16,11 +16,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //enableEdgeToEdge()
-        var binding : ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater);
+        binding = ActivityMainBinding.inflate(layoutInflater);
         setContentView(binding.root)
-
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -28,18 +25,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-
-
         binding.btnCalculoImp.setOnClickListener {
-
 
             val salarioStr = binding.salarioTextInput.text.toString()
             val gastosStr = binding.gastosTextInput.text.toString()
             val dependStr = binding.dependTextInput.text.toString()
 
-            val salario = salarioStr.toFloat()
-            val gastos = gastosStr.toFloat()
-            val dependentes = dependStr.toInt()
+            val salario = if (salarioStr.isEmpty()) 0f else salarioStr.toFloat()
+            val gastos = if (gastosStr.isEmpty()) 0f else gastosStr.toFloat()
+            val dependentes = if (dependStr.isEmpty()) 0 else dependStr.toInt()
 
             val impostoCalculado = calculaImposto(salario, gastos, dependentes)
 
